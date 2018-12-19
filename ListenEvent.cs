@@ -21,8 +21,8 @@ namespace TenSuperscan
         
         public static void StopSuperscanner()
         {
-            TowerActivationEvent.UnSubscribe(OnTowerActive);
-            TowerDeactivationEvent.UnSubscribe(OnTowerDeactive);
+            TowerActivationEvent.Unsubscribe(OnTowerActive);
+            TowerDeactivationEvent.Unsubscribe(OnTowerDeactive);
             TowerHijackEvent.Unsubscribe(OnTowerHijack);
             XanaAwakenEvent.Unsubscribe(OnXANAWake);
             XanaDefeatEvent.Unsubscribe(onXANASleep);

@@ -30,17 +30,17 @@ namespace TenSuperscan
 
         private static void OnTowerActive(ITower tower)
         {
-            LyokoLogger.Log(Name,String.Format("Active tower by {0} detected in the {1} region. ({1} - {2})",tower.Activator.ToString().ToUpper(),tower.Sector.Name.ToUpper(),tower.Number));
+            LyokoLogger.Log(Name,String.Format("<{3}> Active tower by {0} detected in the {1} region. ({1} - {2})",tower.Activator.ToString().ToUpper(),tower.Sector.Name.ToUpper(),tower.Number,tower.Sector.World.Name.ToUpper()));
         }
         
         private static void OnTowerDeactive(ITower tower)
         {
-            LyokoLogger.Log(Name,String.Format("Activated tower has been deactivated in the {0} region. ({0} - {1})",tower.Sector.Name.ToUpper(),tower.Number));
+            LyokoLogger.Log(Name,String.Format("<{2}> Activated tower has been deactivated in the {0} region. ({0} - {1})",tower.Sector.Name.ToUpper(),tower.Number,tower.Sector.World.Name.ToUpper()));
         }
 
         private static void OnTowerHijack(ITower tower, APIActivator oldA, APIActivator newA)
         {
-            LyokoLogger.Log(Name,String.Format("A tower in the {0} region has been hijacked by {1} ({0} #{2}: {3}->{1})",tower.Sector.Name.ToUpper(),newA.ToString().ToUpper(),tower.Number,oldA.ToString().ToUpper()));
+            LyokoLogger.Log(Name,String.Format("<{4}> A tower in the {0} region has been hijacked by {1} ({0} #{2}: {3}->{1})",tower.Sector.Name.ToUpper(),newA.ToString().ToUpper(),tower.Number,oldA.ToString().ToUpper(),tower.Sector.World.Name.ToUpper()));
         }
 
         private static void OnXANAWake()

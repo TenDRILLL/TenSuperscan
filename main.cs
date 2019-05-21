@@ -1,12 +1,15 @@
+using LyokoAPI.API;
 using LyokoAPI.Events;
 using LyokoAPI.Plugin;
 
 namespace TenSuperscan
 {
     public class Main : LyokoAPIPlugin
-    { 
+    {
         public override string Author { get; } = "TenDRILLL";
         public override string Name { get; } = "TenSuperscan";
+        public LVersion Version { get; } = LVersion.Parse("2.0.0.0");
+        
         protected override bool OnDisable()
         {
             ListenEvent.StopSuperscanner();

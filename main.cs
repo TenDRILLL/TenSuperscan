@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using LyokoAPI.API;
 using LyokoAPI.Events;
 using LyokoAPI.Plugin;
@@ -9,6 +11,7 @@ namespace TenSuperscan
         public override string Author { get; } = "TenDRILLL";
         public override string Name { get; } = "TenSuperscan";
         public LVersion Version { get; } = LVersion.Parse("2.0.0.0");
+        public override List<String> CompatibleLAPIVersion = new List<String>() {"1.0.1","2.0.0"};
         
         protected override bool OnDisable()
         {

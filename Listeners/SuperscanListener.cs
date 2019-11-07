@@ -5,7 +5,7 @@ using LyokoAPI.VirtualStructures.Interfaces;
 
 namespace TenSuperscan
 {
-    class ListenEvent
+    class SuperscanListener
     {
         public static string Name = "TenSuperscan";
         
